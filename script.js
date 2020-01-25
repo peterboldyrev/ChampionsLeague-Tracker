@@ -160,14 +160,14 @@ $.ajax({
         {
             //display data and display modal
             displayMatchData();
-            messageString = "The selected two teams are scheduled to play next on : " + dateScheduled ;
+            messageString = "The selected two teams are scheduled to play next on : " + dateScheduled + ".";
             displayModal(messageString);
 
         }
         else if(isPlayed === false && isScheduled === true)
         {
             //display modal only with date
-            messageString = "The selected two teams are scheduled to play next on : " + dateScheduled + "\n There was no match between them in this season yet." ;
+            messageString = "The selected two teams are scheduled to play next on :\xa0\xa0" + dateScheduled + "." + "\xa0 There was no match between them in this season yet." ;
             displayModal(messageString);
 
         }
@@ -190,7 +190,7 @@ function displayMatchData(){
 
     displayDate.text(datePlayed);
     displayWinner.text(winningTeam);
-    displayScore.text(" " + team1Score + "   " + team2Score);
+    displayScore.text(" " + team1Score + "\xa0\xa0\xa0" + team2Score);
 
     searchString = team1FullName + " vs " + team2FullName + " " + datePlayed + " Champions League";
     console.log(searchString);
