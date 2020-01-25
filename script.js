@@ -7,6 +7,7 @@ var datePlayed;
 var winningTeam;
 var team1Score;
 var team2Score;
+var stage;
 var searchString;
 var messageString;
 var isScheduled = false;
@@ -19,6 +20,7 @@ var secondPage = $("#pageTwo");
 var displayDate = $("#date");
 var displayWinner = $("#winner");
 var displayScore = $("#score");
+var displayStage = $("#stage");
 var goBackBtn = $("#goBack");
 
 populateDropdowns(1);
@@ -44,7 +46,7 @@ goBackBtn.on("click", goToFirstPage);
 function onGO(){
 
 if(team1 === team2){
-    displayModal("Either you have not seleacted any teams, or both the teams selected are the same.");
+    displayModal("You have either not selected any teams, or both the teams selected are the same.");
     return;
 }
 
@@ -108,6 +110,8 @@ $.ajax({
                     scoreTeam1 = response.matches[i].homeTeam.name + " : " + response.matches[i].score.fullTime.homeTeam;
                     scoreTeam2 = response.matches[i].awayTeam.name + " : " + response.matches[i].score.fullTime.awayTeam;
 
+                    stage = response.matches[i].stage;
+                    
                     console.log("Date Played : " + dt);
                     console.log("Winner : " + winningTeam)
                     console.log(scoreTeam1);
@@ -167,7 +171,7 @@ $.ajax({
         else if(isPlayed === false && isScheduled === true)
         {
             //display modal only with date
-            messageString = "The selected two teams are scheduled to play next on :\xa0\xa0" + dateScheduled + "." + "\xa0 There was no match between them in this season yet." ;
+            messageString = "The selected two teams are scheduled to play on :\xa0\xa0" + dateScheduled + "." + "\xa0 There was no match between them in this season yet." ;
             displayModal(messageString);
 
         }
@@ -190,7 +194,8 @@ function displayMatchData(){
 
     displayDate.text(datePlayed);
     displayWinner.text(winningTeam);
-    displayScore.text(" " + team1Score + "\xa0\xa0\xa0" + team2Score);
+    displayScore.text(team1Score + "\xa0\xa0\xa0" + team2Score);
+    displayStage.text(stage);
 
     searchString = team1FullName + " vs " + team2FullName + " " + datePlayed + " Champions League";
     console.log(searchString);
@@ -223,10 +228,10 @@ function getVideo() {
             $('.carousel').carousel('prev');
         })
 
-        $('#video1').attr('src', 'https://www.youtube.com/embed/' + response.items[0].id.videoId)
-        $('#video2').attr('src', 'https://www.youtube.com/embed/' + response.items[1].id.videoId)
-        $('#video3').attr('src', 'https://www.youtube.com/embed/' + response.items[2].id.videoId)
-        $('#video4').attr('src', 'https://www.youtube.com/embed/' + response.items[3].id.videoId)
+        $('#video1').attr('src', 'https://www.youtube.com/embed/' + response.items[0].id.videoId);
+        $('#video2').attr('src', 'https://www.youtube.com/embed/' + response.items[1].id.videoId);
+        $('#video3').attr('src', 'https://www.youtube.com/embed/' + response.items[2].id.videoId);
+        $('#video4').attr('src', 'https://www.youtube.com/embed/' + response.items[3].id.videoId);
 
   });
 }
