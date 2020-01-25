@@ -52,7 +52,7 @@ clearFlags();
 
 $.ajax({
     headers:{'X-Auth-Token' :'3d5af28fa6024c74b54c5588d1536b09'},
-    url: 'http://api.football-data.org/v2/competitions/2001/matches' ,
+    url: 'https://api.football-data.org/v2/competitions/2001/matches' ,
     dataType: 'json',
     type: 'GET'
     }).then(function(response){
