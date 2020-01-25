@@ -44,6 +44,7 @@ body{
     margin-left: 10%;
     background-color: darkslategray;
     width: 80%;
+    padding: 0;
 }
 
 #selectedTeam2{
@@ -51,12 +52,12 @@ body{
     margin-top: 50%; 
     background-color: midnightblue;
 }
-#dateText, #winnerText, #scoreText{
+#dateText, #winnerText, #scoreText,#stageText{
     color: lightskyblue;
     font-weight: bolder;
 }
 
-#date,#winner,#score{
+#date,#winner,#score,#stage{
     color:white;
 }
 #selectedTeam1{
