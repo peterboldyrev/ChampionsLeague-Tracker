@@ -91,7 +91,7 @@ $.ajax({
                     let utcDateArr = utcDate.split("T");
                     let dt = utcDateArr[0];
                     console.log(dt);
-                    dt = moment(dt , "YYYY-MM-DD").format("MM-DD-YYYY");
+                    dt = moment(dt , "YYYY-MM-DD").format("DD-MM-YYYY");
                     console.log(dt);
 
                     if(response.matches[i].score.winner === "DRAW")
@@ -141,7 +141,7 @@ $.ajax({
                     let utcDateArr = utcDate.split("T");
                     let dt = utcDateArr[0];
                     console.log(dt);
-                    dt = moment(dt , "YYYY-MM-DD").format("MM-DD-YYYY");
+                    dt = moment(dt , "YYYY-MM-DD").format("DD-MM-YYYY");
                     console.log(dt);
 
                     dateScheduled = dt;
@@ -217,6 +217,7 @@ function getVideo() {
           videoEmbeddable: true,
       }
     }).then(function(response) {
+        console.log(response);
         
         $('.carousel').carousel();
 
