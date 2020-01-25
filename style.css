@@ -1,6 +1,10 @@
 
 body{
     background-image: url("Champions-League.jpg");
+    /* background-position: center center; */
+    /* background-repeat: no-repeat; */
+    /* background-attachment: fixed; */
+    background-size: cover;
 }
 
 .container{
@@ -37,14 +41,23 @@ body{
 /* ************************* */
 
 .dropdown-trigger{
-    margin-left: 35%;
+    margin-left: 10%;
     background-color: darkslategray;
+    width: 80%;
 }
 
 #selectedTeam2{
     /* margin-left: 28%; */
     margin-top: 50%; 
     background-color: midnightblue;
+}
+#dateText, #winnerText, #scoreText{
+    color: lightskyblue;
+    font-weight: bolder;
+}
+
+#date,#winner,#score{
+    color:white;
 }
 #selectedTeam1{
     margin-top: 50%;
@@ -72,7 +85,6 @@ body{
     /* background-color: #fefefe; */
     background-color: midnightblue;
     color: lightgrey;
-
     margin: 15%;
     padding: 20px;
     border: 3px solid #888888;
@@ -85,4 +97,10 @@ body{
     font-size: 15px;
     font-weight: bold;
     margin-top: 2%;
+}
+
+@media screen and (max-width: 768px){
+    .dropdown-trigger{
+        font-size: x-small;
+    }
 }
