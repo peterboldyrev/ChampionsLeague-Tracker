@@ -35,6 +35,10 @@ body{
     display: none;
 }
 
+#pageThree{
+    display: none;
+}
+
 .card{
     margin-left: 15px;
     margin-right: 10px;
@@ -105,4 +109,12 @@ body{
     .dropdown-trigger{
         font-size: x-small;
     }
+}
+
+#pageThreerow{
+    max-width: 30%;
+}
+
+#fav , .collection-item{
+    cursor: pointer;
 }
