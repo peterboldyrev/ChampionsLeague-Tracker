@@ -2,7 +2,7 @@
 Enables users to get the most current game data and videos from the current season of Champions League.  Users need to select two teams from the dropdown and press "Go" to view game data or schedule information.  Additionally, videos of games played will be available. The 4 most recently searched matches will be stored in local storage and will be available next time for quick access. That way, if a match is scheduled, the user can directly go to favorites and click on it without having to select the two teams seperately.
 
 ## Link To Application
-[Champions League Tracker](https://alexshanless.github.io/project01/)
+[Champions League Tracker](https://peterbold.me/ChampionsLeague-Tracker/)
 
 ## Built With
 
